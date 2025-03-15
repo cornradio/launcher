@@ -66,7 +66,6 @@
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.exitbutton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -75,6 +74,14 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
+            this.pictureBox37 = new System.Windows.Forms.PictureBox();
+            this.pictureBox38 = new System.Windows.Forms.PictureBox();
+            this.pictureBox39 = new System.Windows.Forms.PictureBox();
+            this.pictureBox40 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -108,6 +115,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -462,16 +477,6 @@
             this.pictureBox32.TabIndex = 28;
             this.pictureBox32.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(12, 311);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 84);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "恭喜你\r\n发现了彩蛋！\r\n这个软件是因为我不满windows自带的开始菜单\r\n自制的小工具\r\n如果你喜欢\r\n那就太好了\r\n哈哈";
-            // 
             // exitbutton
             // 
             this.exitbutton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -517,7 +522,6 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Launcher";
             this.notifyIcon1.Visible = true;
-            this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_MouseDoubleClick);
             this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // contextMenuStrip1
@@ -547,6 +551,7 @@
             this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 36;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -558,18 +563,113 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "Launcher";
             // 
+            // pictureBox33
+            // 
+            this.pictureBox33.BackColor = System.Drawing.SystemColors.ControlText;
+            this.pictureBox33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox33.Location = new System.Drawing.Point(478, 288);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox33.TabIndex = 45;
+            this.pictureBox33.TabStop = false;
+            // 
+            // pictureBox34
+            // 
+            this.pictureBox34.BackColor = System.Drawing.SystemColors.ControlText;
+            this.pictureBox34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox34.Location = new System.Drawing.Point(412, 288);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox34.TabIndex = 44;
+            this.pictureBox34.TabStop = false;
+            // 
+            // pictureBox35
+            // 
+            this.pictureBox35.BackColor = System.Drawing.SystemColors.ControlText;
+            this.pictureBox35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox35.Location = new System.Drawing.Point(346, 288);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox35.TabIndex = 43;
+            this.pictureBox35.TabStop = false;
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.BackColor = System.Drawing.SystemColors.ControlText;
+            this.pictureBox36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox36.Location = new System.Drawing.Point(280, 288);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox36.TabIndex = 42;
+            this.pictureBox36.TabStop = false;
+            // 
+            // pictureBox37
+            // 
+            this.pictureBox37.BackColor = System.Drawing.SystemColors.ControlText;
+            this.pictureBox37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox37.Location = new System.Drawing.Point(214, 288);
+            this.pictureBox37.Name = "pictureBox37";
+            this.pictureBox37.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox37.TabIndex = 41;
+            this.pictureBox37.TabStop = false;
+            // 
+            // pictureBox38
+            // 
+            this.pictureBox38.BackColor = System.Drawing.SystemColors.ControlText;
+            this.pictureBox38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox38.Location = new System.Drawing.Point(148, 288);
+            this.pictureBox38.Name = "pictureBox38";
+            this.pictureBox38.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox38.TabIndex = 40;
+            this.pictureBox38.TabStop = false;
+            // 
+            // pictureBox39
+            // 
+            this.pictureBox39.BackColor = System.Drawing.SystemColors.ControlText;
+            this.pictureBox39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox39.Location = new System.Drawing.Point(82, 288);
+            this.pictureBox39.Name = "pictureBox39";
+            this.pictureBox39.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox39.TabIndex = 39;
+            this.pictureBox39.TabStop = false;
+            // 
+            // pictureBox40
+            // 
+            this.pictureBox40.BackColor = System.Drawing.SystemColors.ControlText;
+            this.pictureBox40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox40.Location = new System.Drawing.Point(16, 288);
+            this.pictureBox40.Name = "pictureBox40";
+            this.pictureBox40.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox40.TabIndex = 38;
+            this.pictureBox40.TabStop = false;
+            // 
             // Launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(550, 306);
+            this.ClientSize = new System.Drawing.Size(550, 364);
+            this.Controls.Add(this.pictureBox33);
+            this.Controls.Add(this.pictureBox34);
+            this.Controls.Add(this.pictureBox35);
+            this.Controls.Add(this.pictureBox36);
+            this.Controls.Add(this.pictureBox37);
+            this.Controls.Add(this.pictureBox38);
+            this.Controls.Add(this.pictureBox39);
+            this.Controls.Add(this.pictureBox40);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.exitbutton);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox29);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox31);
@@ -641,6 +741,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,7 +788,6 @@
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.PictureBox pictureBox31;
         private System.Windows.Forms.PictureBox pictureBox32;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button exitbutton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
@@ -689,6 +796,14 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox33;
+        private System.Windows.Forms.PictureBox pictureBox34;
+        private System.Windows.Forms.PictureBox pictureBox35;
+        private System.Windows.Forms.PictureBox pictureBox36;
+        private System.Windows.Forms.PictureBox pictureBox37;
+        private System.Windows.Forms.PictureBox pictureBox38;
+        private System.Windows.Forms.PictureBox pictureBox39;
+        private System.Windows.Forms.PictureBox pictureBox40;
     }
 }
 

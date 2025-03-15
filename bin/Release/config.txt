@@ -1,5 +1,9 @@
+pictureBox11=C:\AAA\frp_0.60.0_windows_amd64\runfrp.bat
+pictureBox12=C:\lightspeed\1\HRC.exe - 快捷方式.lnk
+pictureBox6=C:\Users\kasus\source\repos\launcher\launcher\bin\Release\config.txt
+pictureBox7=C:\Users\kasus\Desktop\SplitFiction.exe - 快捷方式.lnk
 pictureBox8=C:\Users\kasus\Desktop\XYplorer.exe - 快捷方式.lnk
-pictureBox4=C:\Users\kasus\Desktop\Cursor.lnk
+pictureBox4=C:\lightspeed\1\Dock_64.exe - 快捷方式.lnk
 pictureBox3=C:\lightspeed\6\守望先锋.lnk
 pictureBox2=C:\lightspeed\6\myepic
 pictureBox1=C:\Users\kasus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Telegram Desktop\Telegram.lnk

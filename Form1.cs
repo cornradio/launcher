@@ -42,7 +42,6 @@ namespace launcher
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
-
             // 为所有PictureBox设置事件
             foreach (Control control in this.Controls)
             {
@@ -66,7 +65,33 @@ namespace launcher
             _animationTimer.Tick += AnimationTimer_Tick;
 
             LoadConfig(); // 加载配置
+            SetupConfigWatcher(); //监听来自配置文件的修改
         }
+        FileSystemWatcher configWatcher = new FileSystemWatcher();
+        private void SetupConfigWatcher()
+        {
+            configWatcher.Path = AppDomain.CurrentDomain.BaseDirectory;
+            configWatcher.Filter = "config.txt";
+            configWatcher.NotifyFilter = NotifyFilters.LastWrite;
+            configWatcher.Changed += OnConfigChanged;
+            configWatcher.EnableRaisingEvents = true;
+        }
+
+        private void OnConfigChanged(object sender, FileSystemEventArgs e)
+        {
+            // 防止多次触发
+            System.Threading.Thread.Sleep(100);
+
+            // 确保是文件改动
+            if (e.ChangeType == WatcherChangeTypes.Changed)
+            {
+                this.Invoke((MethodInvoker)delegate
+                {
+                    LoadConfig();  // 重新加载配置
+                });
+            }
+        }
+
 
         private void PictureBox_DragEnter(object sender, DragEventArgs e)
         {
@@ -266,6 +291,15 @@ namespace launcher
         {
             try
             {
+                // 清空现有图标
+                foreach (var pictureBox in _savedFilePaths.Keys.ToList())
+                {
+                    pictureBox.Image = null;
+                    _savedFilePaths[pictureBox] = string.Empty;
+                    _isFolder[pictureBox] = false;
+                }
+
+                // 读取配置文件
                 if (File.Exists("config.txt"))
                 {
                     string[] lines = File.ReadAllLines("config.txt");
@@ -292,6 +326,7 @@ namespace launcher
                 MessageBox.Show("加载配置失败：" + ex.Message);
             }
         }
+
         // 增加重载 LoadConfig(openFileDialog.FileName);
         public void LoadConfig(string filePath)
         {
@@ -510,7 +545,9 @@ namespace launcher
             
             // 检查是否是文本文件或图片文件
             bool isTxt = ext == ".txt";
-            bool isImage = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp", ".ico", ".tiff", ".webp" }
+            bool isImage = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp", ".ico", ".tiff",
+             ".webp",".url",".bat",".toml",".md",".json",".yaml",".yml",".xml",
+              ".zip", }
                 .Contains(ext);
             
             bool shouldShowName = isFolder || isTxt || isImage;
@@ -645,9 +682,50 @@ namespace launcher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // 提示help：1.拖动程序进来变成快速启动 2. 左键打开程序 3. 中间打开文件位置 4.右键删除图标
-            MessageBox.Show("帮助：\n1.拖动程序进来变成快速启动\n2. 左键打开程序\n3. 中键打开文件位置\n4.右键删除图标\n5.程序作者：kasusa");
+            Form helpForm = new Form
+            {
+                Size = new Size(400, 300),
+                FormBorderStyle = FormBorderStyle.None, // 去掉标题栏
+                StartPosition = FormStartPosition.CenterParent,
+                BackColor = Color.Black
+            };
+
+            Label helpLabel = new Label
+            {
+                Text = "帮助指南\n\n" +
+                       "1. 拖动程序进来变成快速启动\n" +
+                       "2. 左键打开程序\n" +
+                       "3. 中键打开文件位置\n" +
+                       "4. 右键删除图标\n" +
+                       "5. 点击小火箭icon，打开配置文件位置\n" +
+                       "6. 右键托盘退出程序\n" +
+                       "程序作者：kasusa",
+                ForeColor = Color.White,
+                Font = new Font("微软雅黑", 10, FontStyle.Bold),
+                AutoSize = false,
+                Size = new Size(360, 200),
+                TextAlign = ContentAlignment.TopLeft,
+                Location = new Point(20, 20)
+            };
+
+            // 自定义关闭按钮
+            Button closeButton = new Button
+            {
+                Text = "关闭",
+                BackColor = Color.FromArgb(30, 30, 30),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Size = new Size(80, 30),
+                Location = new Point(160, 220)
+            };
+            closeButton.Click += (s, args) => helpForm.Close();
+
+            helpForm.Controls.Add(helpLabel);
+            helpForm.Controls.Add(closeButton);
+
+            helpForm.ShowDialog();
         }
+
 
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -671,6 +749,14 @@ namespace launcher
         private void notifyIcon1_MouseDoubleClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string exePath = Application.ExecutablePath;
+
+            // 打开资源管理器并选中程序本体
+            System.Diagnostics.Process.Start("explorer.exe", $"/select,\"{exePath}\"");
         }
     }
 }
