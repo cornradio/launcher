@@ -1,0 +1,4 @@
+pictureBox11=C:\lightspeed\6\Rockstar Games Launcher.lnk
+pictureBox4=C:\Users\kasus\Desktop\Cursor.lnk
+pictureBox3=C:\lightspeed\6\守望先锋.lnk
+

@@ -1,0 +1,10 @@
+C:\Users\kasus\source\repos\launcher\launcher\bin\Debug\launcher.exe.config
+C:\Users\kasus\source\repos\launcher\launcher\bin\Debug\launcher.exe
+C:\Users\kasus\source\repos\launcher\launcher\bin\Debug\launcher.pdb
+C:\Users\kasus\source\repos\launcher\launcher\obj\Debug\launcher.csproj.AssemblyReference.cache
+C:\Users\kasus\source\repos\launcher\launcher\obj\Debug\launcher.Properties.Resources.resources
+C:\Users\kasus\source\repos\launcher\launcher\obj\Debug\launcher.csproj.GenerateResource.cache
+C:\Users\kasus\source\repos\launcher\launcher\obj\Debug\launcher.csproj.CoreCompileInputs.cache
+C:\Users\kasus\source\repos\launcher\launcher\obj\Debug\launcher.exe
+C:\Users\kasus\source\repos\launcher\launcher\obj\Debug\launcher.pdb
+C:\Users\kasus\source\repos\launcher\launcher\obj\Debug\launcher.Launcher.resources
