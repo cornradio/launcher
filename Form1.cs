@@ -484,58 +484,6 @@ namespace launcher
             return Icon.ExtractAssociatedIcon(Environment.GetFolderPath(Environment.SpecialFolder.Windows));
         }
 
-        private void DrawFolderWithName(PictureBox pictureBox, string folderName, Graphics g)
-        {
-            // 绘制文件夹图标 - 调整位置
-            Icon folderIcon = GetFolderIcon();
-            int iconSize = 32;
-            int iconY = (pictureBox.Height / 2) - (iconSize / 2) - 8; // 图标位置上移一点
-            g.DrawIcon(folderIcon, new Rectangle(
-                pictureBox.Width / 2 - iconSize / 2,  // 水平居中
-                iconY,                                // 垂直位置调整
-                iconSize,
-                iconSize));
-            folderIcon.Dispose();
-
-            // 绘制文件夹名称 - 紧贴图标下方
-            using (StringFormat sf = new StringFormat())
-            {
-                sf.Alignment = StringAlignment.Center;
-                sf.LineAlignment = StringAlignment.Near; // 从顶部对齐
-                sf.Trimming = StringTrimming.EllipsisCharacter; // 文字过长时显示省略号
-
-                // 计算文本区域 - 紧贴图标下方
-                Rectangle textRect = new Rectangle(
-                    2,
-                    iconY + iconSize + 2, // 紧贴图标下方
-                    pictureBox.Width - 4,
-                    pictureBox.Height - (iconY + iconSize + 2));
-
-                // 绘制文本
-                using (Font font = new Font("微软雅黑", 8))
-                {
-                    // 添加文字描边效果使其更清晰
-                    using (GraphicsPath path = new GraphicsPath())
-                    {
-                        path.AddString(
-                            folderName,
-                            font.FontFamily,
-                            (int)font.Style,
-                            font.Size * g.DpiY / 72,
-                            textRect,
-                            sf);
-
-                        // 绘制黑色描边
-                        using (Pen pen = new Pen(Color.Black, 2))
-                        {
-                            g.DrawPath(pen, path);
-                        }
-                        // 填充白色文字
-                        g.FillPath(Brushes.White, path);
-                    }
-                }
-            }
-        }
 
         private void DrawIconWithName(PictureBox pictureBox, string filePath, Graphics g)
         {
