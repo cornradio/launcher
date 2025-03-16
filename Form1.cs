@@ -637,6 +637,7 @@ namespace launcher
                 StartPosition = FormStartPosition.CenterParent,
                 BackColor = Color.Black
             };
+            helpForm.TopMost = true;
 
             Label helpLabel = new Label
             {
@@ -705,6 +706,20 @@ namespace launcher
 
             // 打开资源管理器并选中程序本体
             System.Diagnostics.Process.Start("explorer.exe", $"/select,\"{exePath}\"");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (this.TopMost == false)
+            {
+                this.TopMost = true;
+                button3.ForeColor = Color.Yellow;
+            }
+            else
+            {
+                this.TopMost = false;
+                button3.ForeColor = Color.Gray;
+            }
         }
     }
 }
