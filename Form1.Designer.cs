@@ -134,7 +134,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,7 +145,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(82, 24);
+            this.pictureBox2.Location = new System.Drawing.Point(81, 28);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 60);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -156,7 +156,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(148, 24);
+            this.pictureBox3.Location = new System.Drawing.Point(147, 28);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(60, 60);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -167,7 +167,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(214, 24);
+            this.pictureBox4.Location = new System.Drawing.Point(213, 28);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(60, 60);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,7 +178,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(478, 24);
+            this.pictureBox5.Location = new System.Drawing.Point(477, 28);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(60, 60);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -189,7 +189,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(412, 24);
+            this.pictureBox6.Location = new System.Drawing.Point(411, 28);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(60, 60);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,7 +200,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(346, 24);
+            this.pictureBox7.Location = new System.Drawing.Point(345, 28);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(60, 60);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -211,7 +211,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(280, 24);
+            this.pictureBox8.Location = new System.Drawing.Point(279, 28);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(60, 60);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,7 +222,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Location = new System.Drawing.Point(214, 90);
+            this.pictureBox9.Location = new System.Drawing.Point(213, 94);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(60, 60);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -233,7 +233,7 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(148, 90);
+            this.pictureBox10.Location = new System.Drawing.Point(147, 94);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(60, 60);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +244,7 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox11.Location = new System.Drawing.Point(82, 90);
+            this.pictureBox11.Location = new System.Drawing.Point(81, 94);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(60, 60);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -255,7 +255,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox12.Location = new System.Drawing.Point(16, 90);
+            this.pictureBox12.Location = new System.Drawing.Point(15, 94);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(60, 60);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -266,7 +266,7 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox13.Location = new System.Drawing.Point(478, 90);
+            this.pictureBox13.Location = new System.Drawing.Point(477, 94);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(60, 60);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -277,7 +277,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox14.Location = new System.Drawing.Point(412, 90);
+            this.pictureBox14.Location = new System.Drawing.Point(411, 94);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(60, 60);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -288,7 +288,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox15.Location = new System.Drawing.Point(346, 90);
+            this.pictureBox15.Location = new System.Drawing.Point(345, 94);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(60, 60);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -299,7 +299,7 @@
             // 
             this.pictureBox16.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox16.Location = new System.Drawing.Point(280, 90);
+            this.pictureBox16.Location = new System.Drawing.Point(279, 94);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(60, 60);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -310,7 +310,7 @@
             // 
             this.pictureBox17.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox17.Location = new System.Drawing.Point(214, 156);
+            this.pictureBox17.Location = new System.Drawing.Point(213, 160);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(60, 60);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -321,7 +321,7 @@
             // 
             this.pictureBox18.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox18.Location = new System.Drawing.Point(148, 156);
+            this.pictureBox18.Location = new System.Drawing.Point(147, 160);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(60, 60);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -332,7 +332,7 @@
             // 
             this.pictureBox19.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox19.Location = new System.Drawing.Point(82, 156);
+            this.pictureBox19.Location = new System.Drawing.Point(81, 160);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(60, 60);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -343,7 +343,7 @@
             // 
             this.pictureBox20.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox20.Location = new System.Drawing.Point(16, 156);
+            this.pictureBox20.Location = new System.Drawing.Point(15, 160);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(60, 60);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -354,7 +354,7 @@
             // 
             this.pictureBox21.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox21.Location = new System.Drawing.Point(478, 156);
+            this.pictureBox21.Location = new System.Drawing.Point(477, 160);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(60, 60);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -365,7 +365,7 @@
             // 
             this.pictureBox22.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox22.Location = new System.Drawing.Point(412, 156);
+            this.pictureBox22.Location = new System.Drawing.Point(411, 160);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(60, 60);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -376,7 +376,7 @@
             // 
             this.pictureBox23.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox23.Location = new System.Drawing.Point(346, 156);
+            this.pictureBox23.Location = new System.Drawing.Point(345, 160);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(60, 60);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -387,7 +387,7 @@
             // 
             this.pictureBox24.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox24.Location = new System.Drawing.Point(280, 156);
+            this.pictureBox24.Location = new System.Drawing.Point(279, 160);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(60, 60);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -398,7 +398,7 @@
             // 
             this.pictureBox25.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox25.Location = new System.Drawing.Point(214, 222);
+            this.pictureBox25.Location = new System.Drawing.Point(213, 226);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(60, 60);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -409,7 +409,7 @@
             // 
             this.pictureBox26.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox26.Location = new System.Drawing.Point(148, 222);
+            this.pictureBox26.Location = new System.Drawing.Point(147, 226);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(60, 60);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -420,7 +420,7 @@
             // 
             this.pictureBox27.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox27.Location = new System.Drawing.Point(82, 222);
+            this.pictureBox27.Location = new System.Drawing.Point(81, 226);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(60, 60);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -431,7 +431,7 @@
             // 
             this.pictureBox28.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox28.Location = new System.Drawing.Point(16, 222);
+            this.pictureBox28.Location = new System.Drawing.Point(15, 226);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(60, 60);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -442,7 +442,7 @@
             // 
             this.pictureBox29.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox29.Location = new System.Drawing.Point(478, 222);
+            this.pictureBox29.Location = new System.Drawing.Point(477, 226);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(60, 60);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -453,7 +453,7 @@
             // 
             this.pictureBox30.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox30.Location = new System.Drawing.Point(412, 222);
+            this.pictureBox30.Location = new System.Drawing.Point(411, 226);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(60, 60);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -464,7 +464,7 @@
             // 
             this.pictureBox31.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox31.Location = new System.Drawing.Point(346, 222);
+            this.pictureBox31.Location = new System.Drawing.Point(345, 226);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(60, 60);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -475,7 +475,7 @@
             // 
             this.pictureBox32.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox32.Location = new System.Drawing.Point(280, 222);
+            this.pictureBox32.Location = new System.Drawing.Point(279, 226);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(60, 60);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -489,7 +489,7 @@
             this.exitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitbutton.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.exitbutton.ForeColor = System.Drawing.Color.Crimson;
-            this.exitbutton.Location = new System.Drawing.Point(522, 0);
+            this.exitbutton.Location = new System.Drawing.Point(522, -2);
             this.exitbutton.Name = "exitbutton";
             this.exitbutton.Size = new System.Drawing.Size(30, 30);
             this.exitbutton.TabIndex = 33;
@@ -545,15 +545,16 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.MediumPurple;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(-1, -2);
+            this.button2.Location = new System.Drawing.Point(2, 1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 30);
+            this.button2.Size = new System.Drawing.Size(23, 22);
             this.button2.TabIndex = 36;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -562,7 +563,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(25, 8);
+            this.label2.Location = new System.Drawing.Point(26, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 37;
@@ -572,7 +573,7 @@
             // 
             this.pictureBox33.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox33.Location = new System.Drawing.Point(478, 288);
+            this.pictureBox33.Location = new System.Drawing.Point(477, 292);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(60, 60);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -583,7 +584,7 @@
             // 
             this.pictureBox34.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox34.Location = new System.Drawing.Point(412, 288);
+            this.pictureBox34.Location = new System.Drawing.Point(411, 292);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(60, 60);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -594,7 +595,7 @@
             // 
             this.pictureBox35.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox35.Location = new System.Drawing.Point(346, 288);
+            this.pictureBox35.Location = new System.Drawing.Point(345, 292);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(60, 60);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -605,7 +606,7 @@
             // 
             this.pictureBox36.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox36.Location = new System.Drawing.Point(280, 288);
+            this.pictureBox36.Location = new System.Drawing.Point(279, 292);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(60, 60);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -616,7 +617,7 @@
             // 
             this.pictureBox37.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox37.Location = new System.Drawing.Point(214, 288);
+            this.pictureBox37.Location = new System.Drawing.Point(213, 292);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(60, 60);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -627,7 +628,7 @@
             // 
             this.pictureBox38.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox38.Location = new System.Drawing.Point(148, 288);
+            this.pictureBox38.Location = new System.Drawing.Point(147, 292);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(60, 60);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -638,7 +639,7 @@
             // 
             this.pictureBox39.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox39.Location = new System.Drawing.Point(82, 288);
+            this.pictureBox39.Location = new System.Drawing.Point(81, 292);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(60, 60);
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -649,7 +650,7 @@
             // 
             this.pictureBox40.BackColor = System.Drawing.SystemColors.ControlText;
             this.pictureBox40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox40.Location = new System.Drawing.Point(16, 288);
+            this.pictureBox40.Location = new System.Drawing.Point(15, 292);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(60, 60);
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -661,7 +662,7 @@
             this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Yellow;
             this.button3.Location = new System.Drawing.Point(496, -2);
             this.button3.Name = "button3";
@@ -676,7 +677,7 @@
             this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Gray;
             this.button4.Location = new System.Drawing.Point(467, -2);
             this.button4.Name = "button4";
@@ -689,9 +690,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(-1, 26);
+            this.panel2.Location = new System.Drawing.Point(2, 370);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(553, 332);
+            this.panel2.Size = new System.Drawing.Size(552, 334);
             this.panel2.TabIndex = 48;
             this.panel2.Visible = false;
             // 
@@ -701,10 +702,10 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.textBox1.Location = new System.Drawing.Point(11, 8);
+            this.textBox1.Location = new System.Drawing.Point(12, 10);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(528, 324);
+            this.textBox1.Size = new System.Drawing.Size(526, 314);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "可以在此临时记录，软件关闭后内容消失";
             // 
@@ -713,7 +714,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(550, 370);
+            this.ClientSize = new System.Drawing.Size(550, 369);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

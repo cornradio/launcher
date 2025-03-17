@@ -725,42 +725,21 @@ namespace launcher
         //pencil button
         private void button4_Click(object sender, EventArgs e)
         {
-            Form notepadForm = new Form
+            if (!panel2.Visible)
             {
-                Size = new Size(400, 300),
-                FormBorderStyle = FormBorderStyle.None,
-                StartPosition = FormStartPosition.CenterParent,
-                BackColor = Color.Black
-            };
-            notepadForm.TopMost = true;
-
-            TextBox textBox = new TextBox
+                panel2.Left = 0;
+                panel2.Top = 24;
+                panel2.Show();
+                button4.ForeColor = Color.Cyan;
+                textBox1.Focus();
+            }
+            else
             {
-                BorderStyle = BorderStyle.FixedSingle,
-                Multiline = true,
-                ScrollBars = ScrollBars.Vertical,
-                Size = new Size(360, 250),
-                Location = new Point(20, 20),
-                BackColor = Color.FromArgb(30, 30, 30),
-                ForeColor = Color.White,
-                Font = new Font("微软雅黑", 10)
-            };
+                panel2.Hide();
+                button4.ForeColor = Color.Gray;
 
-            Button closeButton = new Button
-            {
-                Text = "关闭",
-                BackColor = Color.FromArgb(30, 30, 30),
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Size = new Size(80, 30),
-                Location = new Point(160, 240)
-            };
-            closeButton.Click += (s, args) => notepadForm.Close();
+            }
 
-            notepadForm.Controls.Add(textBox);
-            notepadForm.Controls.Add(closeButton);
-
-            notepadForm.ShowDialog();
         }
     }
 }

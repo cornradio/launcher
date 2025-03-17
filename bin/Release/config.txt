@@ -1,5 +1,5 @@
-pictureBox26=C:\lightspeed\6\apex runner.exe
-pictureBox27=C:\lightspeed\6\bSteam++.exe - 快捷方式.lnk
+pictureBox26=C:\lightspeed\6\bSteam++.exe - 快捷方式.lnk
+pictureBox27=C:\lightspeed\6\apex runner.exe
 pictureBox28=C:\lightspeed\3\DS4Windows\DS4Windows.exe
 pictureBox17=C:\lightspeed\6\cmain.exe - 快捷方式.lnk
 pictureBox18=C:\lightspeed\6\Epic Games Launcher.lnk
