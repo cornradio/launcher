@@ -9,6 +9,8 @@
 3. 设置功能，可以设定app的数目和图标的大小
 4. 多配置功能 - 快速切换不同的配置文件（目前只支持config.txt一个文件）
 ## 需求 支持性：
-1. chrome web app 支持 ： 如 notion的快捷方式
-6. 支持直接拖动 http https 链接进来 变成可点击链接
-5. 支持windows app 比如系统便签
+- chrome web app 支持 ： 如 notion的快捷方式
+- 支持直接拖动 http https url 进来 变成可点击链接
+- 支持windows app 比如系统便签
+- 支持ctrl-z撤销图标操作，如撤销删除
+- 支持把文件拖动到图标上 用图标程序打开文件

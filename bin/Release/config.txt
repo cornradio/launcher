@@ -1,13 +1,14 @@
 pictureBox26=C:\lightspeed\6\bSteam++.exe - 快捷方式.lnk
 pictureBox27=C:\lightspeed\6\apex runner.exe
 pictureBox28=C:\lightspeed\3\DS4Windows\DS4Windows.exe
-pictureBox17=C:\lightspeed\6\cmain.exe - 快捷方式.lnk
+pictureBox22=C:\Users\kasus\Desktop\XYplorer.exe - 快捷方式.lnk
 pictureBox18=C:\lightspeed\6\Epic Games Launcher.lnk
 pictureBox19=C:\Users\kasus\Desktop\UU加速器.lnk
 pictureBox20=C:\lightspeed\6\暴雪-国服.lnk
+pictureBox10=C:\Users\kasus\Desktop\Cursor.lnk
 pictureBox11=C:\Program Files\Clash Verge\clash-verge.exe
 pictureBox12=C:\lightspeed\2\Telegram.lnk
-pictureBox4=C:\lightspeed\3\RaiDrive.exe - 快捷方式.lnk
+pictureBox6=C:\lightspeed\3\RaiDrive.exe - 快捷方式.lnk
 pictureBox3=C:\lightspeed\2\GitHub Desktop.lnk
 pictureBox2=C:\lightspeed\2\Everything.lnk
 pictureBox1=C:\lightspeed\2\Chrome.lnk
