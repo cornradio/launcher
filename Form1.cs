@@ -58,7 +58,7 @@ namespace launcher
                     _savedFilePaths[pictureBox] = string.Empty;
                 }
             }
-            
+
             // 初始化定时器
             _animationTimer = new Timer();
             _animationTimer.Interval = 50;
@@ -404,9 +404,9 @@ namespace launcher
                     // 如果 ExtractAssociatedIcon 失败，尝试 ExtractIconEx
                     IntPtr[] largeIcons = new IntPtr[1];
                     IntPtr[] smallIcons = new IntPtr[1];
-                    
+
                     int iconCount = ExtractIconEx(filePath, 0, largeIcons, smallIcons, 1);
-                    
+
                     if (iconCount > 0 && largeIcons[0] != IntPtr.Zero)
                     {
                         Icon icon = Icon.FromHandle(largeIcons[0]);
@@ -456,7 +456,7 @@ namespace launcher
         }
 
         [DllImport("shell32.dll", CharSet = CharSet.Auto)]
-        private static extern int ExtractIconEx(string szFileName, int nIconIndex, 
+        private static extern int ExtractIconEx(string szFileName, int nIconIndex,
             IntPtr[] phiconLarge, IntPtr[] phiconSmall, int nIcons);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
@@ -466,10 +466,10 @@ namespace launcher
         {
             IntPtr[] largeIcons = new IntPtr[1];
             IntPtr[] smallIcons = new IntPtr[1];
-            
+
             // 获取系统文件夹图标 (3是文件夹的索引)
             ExtractIconEx("shell32.dll", 3, largeIcons, smallIcons, 1);
-            
+
             if (largeIcons[0] != IntPtr.Zero)
             {
                 Icon icon = Icon.FromHandle(largeIcons[0]);
@@ -479,7 +479,7 @@ namespace launcher
                 }
                 return icon;
             }
-            
+
             // 如果获取失败，使用默认方法
             return Icon.ExtractAssociatedIcon(Environment.GetFolderPath(Environment.SpecialFolder.Windows));
         }
@@ -490,19 +490,19 @@ namespace launcher
             string fileName = Path.GetFileName(filePath);
             bool isFolder = Directory.Exists(filePath);
             string ext = Path.GetExtension(filePath).ToLower();
-            
+
             // 检查是否是文本文件或图片文件
             bool isTxt = ext == ".txt";
             bool isImage = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp", ".ico", ".tiff",
              ".webp",".url",".bat",".toml",".md",".json",".yaml",".yml",".xml",
               ".zip", }
                 .Contains(ext);
-            
+
             bool shouldShowName = isFolder || isTxt || isImage;
-            
+
             // 获取图标
             Icon icon = isFolder ? GetFolderIcon() : GetFileIcon(filePath);
-            
+
             try
             {
                 // 增大图标尺寸
@@ -526,7 +526,7 @@ namespace launcher
                         // 调整文本区域位置
                         Rectangle textRect = new Rectangle(
                             2,
-                            iconY + (iconSize * 2/3),  // 从图标2/3处开始
+                            iconY + (iconSize * 2 / 3),  // 从图标2/3处开始
                             pictureBox.Width - 4,
                             iconSize / 3);             // 占用图标下1/3部分
 
@@ -720,6 +720,47 @@ namespace launcher
                 this.TopMost = false;
                 button3.ForeColor = Color.Gray;
             }
+        }
+
+        //pencil button
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form notepadForm = new Form
+            {
+                Size = new Size(400, 300),
+                FormBorderStyle = FormBorderStyle.None,
+                StartPosition = FormStartPosition.CenterParent,
+                BackColor = Color.Black
+            };
+            notepadForm.TopMost = true;
+
+            TextBox textBox = new TextBox
+            {
+                BorderStyle = BorderStyle.FixedSingle,
+                Multiline = true,
+                ScrollBars = ScrollBars.Vertical,
+                Size = new Size(360, 250),
+                Location = new Point(20, 20),
+                BackColor = Color.FromArgb(30, 30, 30),
+                ForeColor = Color.White,
+                Font = new Font("微软雅黑", 10)
+            };
+
+            Button closeButton = new Button
+            {
+                Text = "关闭",
+                BackColor = Color.FromArgb(30, 30, 30),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Size = new Size(80, 30),
+                Location = new Point(160, 240)
+            };
+            closeButton.Click += (s, args) => notepadForm.Close();
+
+            notepadForm.Controls.Add(textBox);
+            notepadForm.Controls.Add(closeButton);
+
+            notepadForm.ShowDialog();
         }
     }
 }
