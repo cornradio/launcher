@@ -1,0 +1,4 @@
+pictureBox5=C:\Users\kasus\Desktop\LAN Clipboard.url
+pictureBox6=C:\Users\kasus\Desktop\XYplorer.exe - 快捷方式.lnk
+pictureBox7=C:\lightspeed\3\DS4Windows\DS4Windows.exe
+pictureBox8=C:\lightspeed\3\DS4Windows\Tools

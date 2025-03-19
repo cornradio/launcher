@@ -86,6 +86,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel_dot1 = new System.Windows.Forms.Panel();
+            this.panel_dot2 = new System.Windows.Forms.Panel();
+            this.panel_dot3 = new System.Windows.Forms.Panel();
+            this.panel_dot4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -709,12 +713,56 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "可以在此临时记录，软件关闭后内容消失";
             // 
+            // panel_dot1
+            // 
+            this.panel_dot1.BackColor = System.Drawing.Color.White;
+            this.panel_dot1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_dot1.Location = new System.Drawing.Point(246, 356);
+            this.panel_dot1.Name = "panel_dot1";
+            this.panel_dot1.Size = new System.Drawing.Size(6, 6);
+            this.panel_dot1.TabIndex = 49;
+            this.panel_dot1.Click += new System.EventHandler(this.panel_dot1_Click);
+            // 
+            // panel_dot2
+            // 
+            this.panel_dot2.BackColor = System.Drawing.Color.Gray;
+            this.panel_dot2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_dot2.Location = new System.Drawing.Point(264, 356);
+            this.panel_dot2.Name = "panel_dot2";
+            this.panel_dot2.Size = new System.Drawing.Size(6, 6);
+            this.panel_dot2.TabIndex = 50;
+            this.panel_dot2.Click += new System.EventHandler(this.panel_dot1_Click);
+            // 
+            // panel_dot3
+            // 
+            this.panel_dot3.BackColor = System.Drawing.Color.Gray;
+            this.panel_dot3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_dot3.Location = new System.Drawing.Point(282, 356);
+            this.panel_dot3.Name = "panel_dot3";
+            this.panel_dot3.Size = new System.Drawing.Size(6, 6);
+            this.panel_dot3.TabIndex = 51;
+            this.panel_dot3.Click += new System.EventHandler(this.panel_dot1_Click);
+            // 
+            // panel_dot4
+            // 
+            this.panel_dot4.BackColor = System.Drawing.Color.Gray;
+            this.panel_dot4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_dot4.Location = new System.Drawing.Point(300, 356);
+            this.panel_dot4.Name = "panel_dot4";
+            this.panel_dot4.Size = new System.Drawing.Size(6, 6);
+            this.panel_dot4.TabIndex = 52;
+            this.panel_dot4.Click += new System.EventHandler(this.panel_dot1_Click);
+            // 
             // Launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(550, 369);
+            this.Controls.Add(this.panel_dot4);
+            this.Controls.Add(this.panel_dot3);
+            this.Controls.Add(this.panel_dot2);
+            this.Controls.Add(this.panel_dot1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -764,12 +812,14 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "Launcher";
             this.Opacity = 0.94D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Launcher";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Launcher_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Launcher_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -872,6 +922,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel_dot1;
+        private System.Windows.Forms.Panel panel_dot2;
+        private System.Windows.Forms.Panel panel_dot3;
+        private System.Windows.Forms.Panel panel_dot4;
     }
 }
 

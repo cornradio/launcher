@@ -23,6 +23,7 @@ namespace launcher
         private Dictionary<PictureBox, bool> _isFolder = new Dictionary<PictureBox, bool>();
         private PictureBox _dragSourceBox = null;
         private Point? _dragStartPoint = null;
+        private string currentconfig = "panel_dot1.txt";
         private const int DragThreshold = 5; // 拖动阈值，像素单位
 
         //窗口可以拖拽
@@ -71,7 +72,7 @@ namespace launcher
         private void SetupConfigWatcher()
         {
             configWatcher.Path = AppDomain.CurrentDomain.BaseDirectory;
-            configWatcher.Filter = "config.txt";
+            configWatcher.Filter =currentconfig;
             configWatcher.NotifyFilter = NotifyFilters.LastWrite;
             configWatcher.Changed += OnConfigChanged;
             configWatcher.EnableRaisingEvents = true;
@@ -87,7 +88,7 @@ namespace launcher
             {
                 this.Invoke((MethodInvoker)delegate
                 {
-                    LoadConfig();  // 重新加载配置
+                    LoadConfig(currentconfig);  // 重新加载配置
                 });
             }
         }
@@ -270,7 +271,7 @@ namespace launcher
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter("config.txt"))
+                using (StreamWriter writer = new StreamWriter(currentconfig))
                 {
                     foreach (var pair in _savedFilePaths)
                     {
@@ -300,9 +301,9 @@ namespace launcher
                 }
 
                 // 读取配置文件
-                if (File.Exists("config.txt"))
+                if (File.Exists(currentconfig))
                 {
-                    string[] lines = File.ReadAllLines("config.txt");
+                    string[] lines = File.ReadAllLines(currentconfig);
                     foreach (string line in lines)
                     {
                         string[] parts = line.Split('=');
@@ -327,14 +328,22 @@ namespace launcher
             }
         }
 
-        // 增加重载 LoadConfig(openFileDialog.FileName);
-        public void LoadConfig(string filePath)
+        private void LoadConfig(string configFilePath)
         {
             try
             {
-                if (File.Exists(filePath))
+                // 清空现有图标
+                foreach (var pictureBox in _savedFilePaths.Keys.ToList())
                 {
-                    string[] lines = File.ReadAllLines(filePath);
+                    pictureBox.Image = null;
+                    _savedFilePaths[pictureBox] = string.Empty;
+                    _isFolder[pictureBox] = false;
+                }
+
+                // 读取配置文件
+                if (File.Exists(configFilePath))
+                {
+                    string[] lines = File.ReadAllLines(configFilePath);
                     foreach (string line in lines)
                     {
                         string[] parts = line.Split('=');
@@ -343,10 +352,10 @@ namespace launcher
                             Control[] controls = this.Controls.Find(parts[0], false);
                             if (controls.Length > 0 && controls[0] is PictureBox pictureBox)
                             {
-                                string path = parts[1];
-                                if (File.Exists(path) || Directory.Exists(path))
+                                string filePath = parts[1];
+                                if (File.Exists(filePath) || Directory.Exists(filePath))
                                 {
-                                    HandleFileDropped(pictureBox, path);
+                                    HandleFileDropped(pictureBox, filePath);
                                 }
                             }
                         }
@@ -358,6 +367,7 @@ namespace launcher
                 MessageBox.Show("加载配置失败：" + ex.Message);
             }
         }
+
 
         private Icon GetFileIcon(string filePath)
         {
@@ -647,7 +657,8 @@ namespace launcher
                        "3. 中键打开文件位置\n" +
                        "4. 右键删除图标\n" +
                        "5. 点击小火箭icon，打开配置文件位置\n" +
-                       "6. 右键托盘退出程序\n" +
+                       "6. 程序有四个页面，可以用AD/1234按键切换\n" +
+                       "7. 右键托盘退出程序\n" +
                        "程序作者：kasusa",
                 ForeColor = Color.White,
                 Font = new Font("微软雅黑", 10, FontStyle.Bold),
@@ -740,6 +751,103 @@ namespace launcher
 
             }
 
+        }
+
+        private void panel_dot1_Click(object sender, EventArgs e)
+        {
+            panel_dot1.BackColor = Color.Gray;
+            panel_dot2.BackColor = Color.Gray;
+            panel_dot3.BackColor = Color.Gray;
+            panel_dot4.BackColor = Color.Gray;
+            Panel clickedPanel = sender as Panel;
+            clickedPanel.BackColor = Color.White;
+            SaveConfig();
+
+            clearImageBoxes();
+            currentconfig =  clickedPanel.Name +".txt" ;
+            LoadConfig(currentconfig);
+            //LoadImageBox(int page);
+        }
+
+        private void clearImageBoxes()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is PictureBox pictureBox)
+                {
+                    pictureBox.Image = null; // 清除 PictureBox 中的图像
+                    _savedFilePaths[pictureBox] = string.Empty; // 清空保存的文件路径
+                    _isFolder[pictureBox] = false; // 重置文件夹标记
+                }
+            }
+        }
+
+
+        private int _currentPage = 1;
+        private void Launcher_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A)
+            {
+                // 左键，切换到上一页
+                _currentPage--;
+                if (_currentPage < 1)
+                {
+                    _currentPage = 4; // 如果当前是第一页，则切换到最后一页
+                }
+                UpdateCurrentPage();
+            }
+            else if (e.KeyCode == Keys.D)
+            {
+                // 右键，切换到下一页
+                _currentPage++;
+                if (_currentPage > 4)
+                {
+                    _currentPage = 1; // 如果当前是最后一页，则切换到第一页
+                }
+                UpdateCurrentPage();
+            }
+            else
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.D1: // 数字键 1
+                        _currentPage = 1;
+                        UpdateCurrentPage();
+                        break;
+                    case Keys.D2: // 数字键 2
+                        _currentPage = 2;
+                        UpdateCurrentPage();
+                        break;
+                    case Keys.D3: // 数字键 3
+                        _currentPage = 3;
+                        UpdateCurrentPage();
+                        break;
+                    case Keys.D4: // 数字键 4
+                        _currentPage = 4;
+                        UpdateCurrentPage();
+                        break;
+                }
+            }
+
+        }
+
+        private void UpdateCurrentPage()
+        {
+            switch (_currentPage)
+            {
+                case 1:
+                    panel_dot1_Click(panel_dot1, EventArgs.Empty);
+                    break;
+                case 2:
+                    panel_dot1_Click(panel_dot2, EventArgs.Empty);
+                    break;
+                case 3:
+                    panel_dot1_Click(panel_dot3, EventArgs.Empty);
+                    break;
+                case 4:
+                    panel_dot1_Click(panel_dot4, EventArgs.Empty);
+                    break;
+            }
         }
     }
 }
