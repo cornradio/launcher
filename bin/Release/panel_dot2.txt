@@ -1,4 +1,4 @@
-pictureBox5=C:\Users\kasus\Desktop\LAN Clipboard.url
-pictureBox6=C:\Users\kasus\Desktop\XYplorer.exe - 快捷方式.lnk
-pictureBox7=C:\lightspeed\3\DS4Windows\DS4Windows.exe
-pictureBox8=C:\lightspeed\3\DS4Windows\Tools
+pictureBox14=C:\lightspeed\1\HRC.exe - 快捷方式.lnk
+pictureBox5=C:\lightspeed\1\MobaXterm_Personal_24.4.exe - 快捷方式.lnk
+pictureBox6=C:\lightspeed\1\fWinSCP.lnk
+pictureBox7=C:\lightspeed\3\RaiDrive.exe - 快捷方式.lnk

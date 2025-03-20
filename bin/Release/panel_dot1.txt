@@ -1,6 +1,7 @@
+pictureBox19=C:\Users\kasus\Desktop\暴雪 国服.lnk
+pictureBox15=C:\lightspeed\4\VMware Workstation Pro.lnk
 pictureBox16=C:\lightspeed\2\GitHub Desktop.lnk
 pictureBox9=C:\lightspeed\2\Telegram.lnk
 pictureBox11=C:\lightspeed\2\Chrome.lnk
-pictureBox12=C:\Users\kasus\Desktop\UU加速器.lnk
-pictureBox8=C:\lightspeed\4\VMware Workstation Pro.lnk
-pictureBox4=C:\lightspeed\3\RaiDrive.exe - 快捷方式.lnk
+pictureBox12=C:\lightspeed\2\d抖音.lnk
+pictureBox1=C:\Users\kasus\Desktop\UU加速器.lnk

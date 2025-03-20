@@ -784,6 +784,7 @@ namespace launcher
 
 
         private int _currentPage = 1;
+        private int _totalPages = 4;
         private void Launcher_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.A)
@@ -849,5 +850,7 @@ namespace launcher
                     break;
             }
         }
+
+
     }
 }
