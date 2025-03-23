@@ -42,6 +42,8 @@ namespace launcher
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
+
 
             // 为所有PictureBox设置事件
             foreach (Control control in this.Controls)
@@ -851,6 +853,29 @@ namespace launcher
             }
         }
 
+        private void Form1_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                // 左键，切换到上一页
+                _currentPage--;
+                if (_currentPage < 1)
+                {
+                    _currentPage = 4; // 如果当前是第一页，则切换到最后一页
+                }
+                UpdateCurrentPage();
+            }
+            else
+            {
+                // 右键，切换到下一页
+                _currentPage++;
+                if (_currentPage > 4)
+                {
+                    _currentPage = 1; // 如果当前是最后一页，则切换到第一页
+                }
+                UpdateCurrentPage();
+            }
+        }
 
     }
 }

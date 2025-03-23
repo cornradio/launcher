@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfNetworkConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NetworkConfiguration>
+    <IpAddress>192.168.31.90</IpAddress>
+    <SubnetMask>255.255.255.0</SubnetMask>
+    <Gateway>192.168.31.1</Gateway>
+    <PrimaryDns>192.168.31.1</PrimaryDns>
+    <SecondaryDns />
+    <Description>default</Description>
+  </NetworkConfiguration>
+  <NetworkConfiguration>
+    <IpAddress>192.168.31.90</IpAddress>
+    <SubnetMask>255.255.255.0</SubnetMask>
+    <Gateway>192.168.31.100</Gateway>
+    <PrimaryDns>192.168.31.100</PrimaryDns>
+    <SecondaryDns />
+    <Description>istoreos</Description>
+  </NetworkConfiguration>
+</ArrayOfNetworkConfiguration>

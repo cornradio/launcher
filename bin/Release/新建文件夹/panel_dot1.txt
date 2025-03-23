@@ -1,0 +1,13 @@
+pictureBox17=C:\lightspeed\2\y网易云音乐.lnk
+pictureBox18=C:\lightspeed\2\Telegram.lnk
+pictureBox19=C:\Users\kasus\Desktop\暴雪 国服.lnk
+pictureBox20=C:\Users\kasus\Desktop\UU加速器.lnk
+pictureBox16=C:\lightspeed\4\VMware Workstation Pro.lnk
+pictureBox10=C:\lightspeed\2\Visual Studio Code.lnk
+pictureBox11=C:\lightspeed\2\Chrome.lnk
+pictureBox12=C:\lightspeed\2\d抖音.lnk
+pictureBox5=C:\lightspeed\2\GitHub Desktop.lnk
+pictureBox4=C:\Users\kasus\Desktop\Cursor.lnk
+pictureBox3=C:\lightspeed\0\Dock_64.exe - 快捷方式.lnk
+pictureBox2=C:\lightspeed
+pictureBox1=C:\lightspeed\2\Obsidian.lnk

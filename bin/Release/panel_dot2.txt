@@ -1,4 +1,8 @@
-pictureBox14=C:\lightspeed\1\HRC.exe - 快捷方式.lnk
-pictureBox5=C:\lightspeed\1\MobaXterm_Personal_24.4.exe - 快捷方式.lnk
-pictureBox6=C:\lightspeed\1\fWinSCP.lnk
+pictureBox14=C:\lightspeed\0\IP Changer.exe
+pictureBox6=C:\lightspeed\1\HRC.exe - 快捷方式.lnk
 pictureBox7=C:\lightspeed\3\RaiDrive.exe - 快捷方式.lnk
+pictureBox8=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Proxifier\Proxifier.lnk
+pictureBox4=C:\lightspeed\0\ubuntu.rdp
+pictureBox3=C:\lightspeed\0\SwitchHosts.lnk
+pictureBox2=C:\lightspeed\1\MobaXterm_Personal_24.4.exe - 快捷方式.lnk
+pictureBox1=C:\lightspeed\1\fWinSCP.lnk

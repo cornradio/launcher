@@ -1,0 +1,6 @@
+pictureBox7=C:\lightspeed\6\uu.exe - 快捷方式.lnk
+pictureBox8=C:\lightspeed\6\RetroArch.lnk
+pictureBox4=C:\lightspeed\6\Epic Games Launcher.lnk
+pictureBox3=C:\lightspeed\6\bSteam++.exe - 快捷方式.lnk
+pictureBox2=C:\lightspeed\6\守望先锋.lnk
+pictureBox1=C:\lightspeed\6\暴雪-国服.lnk

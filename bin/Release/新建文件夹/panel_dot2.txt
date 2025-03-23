@@ -1,0 +1,6 @@
+pictureBox21=C:\lightspeed\0\百度网盘.lnk
+pictureBox13=C:\lightspeed\1\HRC.exe - 快捷方式.lnk
+pictureBox7=C:\lightspeed\3\RaiDrive.exe - 快捷方式.lnk
+pictureBox3=C:\lightspeed\0\SwitchHosts.lnk
+pictureBox2=C:\lightspeed\1\MobaXterm_Personal_24.4.exe - 快捷方式.lnk
+pictureBox1=C:\lightspeed\1\fWinSCP.lnk
