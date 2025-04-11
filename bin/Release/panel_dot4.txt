@@ -1,0 +1,2 @@
+pictureBox2=C:\lightspeed\8\iStoreOS - 运行状态 - LuCI.url
+pictureBox1=C:\lightspeed\8\yacd.url

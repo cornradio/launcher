@@ -1,5 +1,8 @@
-pictureBox14=C:\lightspeed\0\IP Changer.exe
-pictureBox6=C:\lightspeed\1\HRC.exe - 快捷方式.lnk
+pictureBox9=C:\lightspeed\0\IP Changer.exe
+pictureBox10=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Termora.lnk
+pictureBox11=C:\lightspeed\1\HRC.exe - 快捷方式.lnk
+pictureBox12=C:\lightspeed\0\Magpie.exe - 快捷方式.lnk
+pictureBox6=C:\lightspeed\0\RBTray.exe - 快捷方式.lnk
 pictureBox7=C:\lightspeed\3\RaiDrive.exe - 快捷方式.lnk
 pictureBox8=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Proxifier\Proxifier.lnk
 pictureBox4=C:\lightspeed\0\ubuntu.rdp

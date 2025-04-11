@@ -38,12 +38,19 @@ namespace launcher
                 message.Result = (IntPtr)HTCAPTION;
         }
 
+        // 添加新的字典来缓存所有页面的数据
+        private Dictionary<string, Dictionary<PictureBox, Image>> _pageImageCache = new Dictionary<string, Dictionary<PictureBox, Image>>();
+        private Dictionary<string, Dictionary<PictureBox, string>> _pagePathCache = new Dictionary<string, Dictionary<PictureBox, string>>();
+        private Dictionary<string, Dictionary<PictureBox, bool>> _pageFolderCache = new Dictionary<string, Dictionary<PictureBox, bool>>();
+
         public Launcher()
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
 
+            // 初始化缓存
+            InitializePageCaches();
 
             // 为所有PictureBox设置事件
             foreach (Control control in this.Controls)
@@ -69,6 +76,9 @@ namespace launcher
 
             LoadConfig(); // 加载配置
             SetupConfigWatcher(); //监听来自配置文件的修改
+
+            // 预加载所有页面
+            PreloadAllPages();
         }
         FileSystemWatcher configWatcher = new FileSystemWatcher();
         private void SetupConfigWatcher()
@@ -507,7 +517,7 @@ namespace launcher
             bool isTxt = ext == ".txt";
             bool isImage = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp", ".ico", ".tiff",
              ".webp",".url",".bat",".toml",".md",".json",".yaml",".yml",".xml",
-              ".zip", }
+              ".zip",".rdp" }
                 .Contains(ext);
 
             bool shouldShowName = isFolder || isTxt || isImage;
@@ -517,14 +527,37 @@ namespace launcher
 
             try
             {
-                // 增大图标尺寸
-                int iconSize = 48;
+                // 增加图标尺寸到64x64
+                int iconSize = 50; // 从48改为64
                 int iconY = (pictureBox.Height - iconSize) / 2;
-                g.DrawIcon(icon, new Rectangle(
-                    pictureBox.Width / 2 - iconSize / 2,
-                    iconY,
-                    iconSize,
-                    iconSize));
+
+                // 使用高质量渲染设置
+                g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                g.CompositingQuality = CompositingQuality.HighQuality;
+                g.SmoothingMode = SmoothingMode.HighQuality;
+                g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                // 使用更高质量的图标绘制方法
+                if (icon.Width >= 64)
+                {
+                    // 如果图标本身就很大，直接绘制
+                    g.DrawIcon(icon, new Rectangle(
+                        pictureBox.Width / 2 - iconSize / 2,
+                        iconY,
+                        iconSize,
+                        iconSize));
+                }
+                else
+                {
+                    // 如果图标较小，使用 DrawImage 方法进行高质量缩放
+                    using (Bitmap iconBmp = icon.ToBitmap())
+                    {
+                        g.DrawImage(iconBmp, 
+                            new Rectangle(pictureBox.Width / 2 - iconSize / 2, iconY, iconSize, iconSize),
+                            new Rectangle(0, 0, iconBmp.Width, iconBmp.Height),
+                            GraphicsUnit.Pixel);
+                    }
+                }
 
                 // 显示文件夹、txt文件和图片文件的名称
                 if (shouldShowName)
@@ -538,26 +571,29 @@ namespace launcher
                         // 调整文本区域位置
                         Rectangle textRect = new Rectangle(
                             2,
-                            iconY + (iconSize * 2 / 3),  // 从图标2/3处开始
+                            iconY + (iconSize * 3 / 4),  // 从图标3/4处开始
                             pictureBox.Width - 4,
-                            iconSize / 3);             // 占用图标下1/3部分
+                            iconSize / 4);             // 占用图标下1/4部分
 
-                        // 调整字体大小
-                        using (Font font = new Font("微软雅黑", 8, FontStyle.Bold))
+                        // 使用更大的字体 //draw text
+                        using (Font font = new Font("微软雅黑", 9, FontStyle.Bold))
                         {
                             using (GraphicsPath path = new GraphicsPath())
                             {
+                                // 使用更高的DPI值来渲染文字
+                                float emSize = font.Size * g.DpiY / 72;
                                 path.AddString(
                                     fileName,
                                     font.FontFamily,
                                     (int)font.Style,
-                                    font.Size * g.DpiY / 72,
+                                    emSize,
                                     textRect,
                                     sf);
 
-                                // 增加描边宽度以确保可读性
-                                using (Pen pen = new Pen(Color.Black, 4))
+                                // 增加描边效果以提高可读性
+                                using (Pen pen = new Pen(Color.Black, 3))
                                 {
+                                    pen.LineJoin = LineJoin.Round; // 使描边更圆滑
                                     g.DrawPath(pen, path);
                                 }
                                 g.FillPath(Brushes.White, path);
@@ -579,15 +615,44 @@ namespace launcher
                 _savedFilePaths[pictureBox] = filePath;
                 _isFolder[pictureBox] = Directory.Exists(filePath);
 
-                using (Bitmap bmp = new Bitmap(pictureBox.Width, pictureBox.Height))
+                // 创建2倍大小的位图以提高清晰度
+                using (Bitmap bmp = new Bitmap(pictureBox.Width * 2, pictureBox.Height * 2))
                 {
                     using (Graphics g = Graphics.FromImage(bmp))
                     {
-                        g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-                        g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+                        // 设置高质量缩放
+                        g.ScaleTransform(2, 2);
+                        g.SmoothingMode = SmoothingMode.HighQuality;
+                        g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                        g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+                        g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+
                         DrawIconWithName(pictureBox, filePath, g);
                     }
-                    pictureBox.Image = bmp.Clone() as Image;
+
+                    // 缩放回原始大小
+                    using (Bitmap finalBmp = new Bitmap(pictureBox.Width, pictureBox.Height))
+                    {
+                        using (Graphics g = Graphics.FromImage(finalBmp))
+                        {
+                            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                            g.DrawImage(bmp, 0, 0, pictureBox.Width, pictureBox.Height);
+                        }
+                        pictureBox.Image = finalBmp.Clone() as Image;
+
+                        // 更新缓存
+                        string currentPage = Path.GetFileNameWithoutExtension(currentconfig);
+                        if (_pageImageCache.ContainsKey(currentPage))
+                        {
+                            if (_pageImageCache[currentPage].ContainsKey(pictureBox))
+                            {
+                                _pageImageCache[currentPage][pictureBox]?.Dispose();
+                            }
+                            _pageImageCache[currentPage][pictureBox] = finalBmp.Clone() as Image;
+                            _pagePathCache[currentPage][pictureBox] = filePath;
+                            _pageFolderCache[currentPage][pictureBox] = Directory.Exists(filePath);
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -628,6 +693,15 @@ namespace launcher
         {
             base.OnFormClosing(e);
             SaveConfig();
+
+            // 清理图片缓存
+            foreach (var pageCache in _pageImageCache.Values)
+            {
+                foreach (var image in pageCache.Values)
+                {
+                    image?.Dispose();
+                }
+            }
         }
 
         private void exitbutton_Click(object sender, EventArgs e)
@@ -663,7 +737,7 @@ namespace launcher
                        "7. 右键托盘退出程序\n" +
                        "程序作者：kasusa",
                 ForeColor = Color.White,
-                Font = new Font("微软雅黑", 10, FontStyle.Bold),
+                Font = new Font("微软雅黑", 10),
                 AutoSize = false,
                 Size = new Size(360, 200),
                 TextAlign = ContentAlignment.TopLeft,
@@ -763,12 +837,13 @@ namespace launcher
             panel_dot4.BackColor = Color.Gray;
             Panel clickedPanel = sender as Panel;
             clickedPanel.BackColor = Color.White;
-            SaveConfig();
 
             clearImageBoxes();
-            currentconfig =  clickedPanel.Name +".txt" ;
-            LoadConfig(currentconfig);
-            //LoadImageBox(int page);
+            currentconfig = clickedPanel.Name + ".txt";
+            
+            // 从缓存加载页面
+            string pageName = clickedPanel.Name;
+            LoadPageFromCache(pageName);
         }
 
         private void clearImageBoxes()
@@ -783,7 +858,6 @@ namespace launcher
                 }
             }
         }
-
 
         private int _currentPage = 1;
         private int _totalPages = 4;
@@ -877,5 +951,81 @@ namespace launcher
             }
         }
 
+        private void InitializePageCaches()
+        {
+            string[] pages = new[] { "panel_dot1", "panel_dot2", "panel_dot3", "panel_dot4" };
+            foreach (string page in pages)
+            {
+                _pageImageCache[page] = new Dictionary<PictureBox, Image>();
+                _pagePathCache[page] = new Dictionary<PictureBox, string>();
+                _pageFolderCache[page] = new Dictionary<PictureBox, bool>();
+            }
+        }
+
+        private void PreloadAllPages()
+        {
+            string[] pages = new[] { "panel_dot1", "panel_dot2", "panel_dot3", "panel_dot4" };
+            foreach (string page in pages)
+            {
+                LoadPageToCache(page + ".txt");
+            }
+        }
+
+        private void LoadPageToCache(string configFile)
+        {
+            string pageName = Path.GetFileNameWithoutExtension(configFile);
+            try
+            {
+                if (File.Exists(configFile))
+                {
+                    string[] lines = File.ReadAllLines(configFile);
+                    foreach (string line in lines)
+                    {
+                        string[] parts = line.Split('=');
+                        if (parts.Length == 2)
+                        {
+                            Control[] controls = this.Controls.Find(parts[0], false);
+                            if (controls.Length > 0 && controls[0] is PictureBox pictureBox)
+                            {
+                                string filePath = parts[1];
+                                if (File.Exists(filePath) || Directory.Exists(filePath))
+                                {
+                                    // 创建图标并保存到缓存
+                                    using (Bitmap bmp = new Bitmap(pictureBox.Width, pictureBox.Height))
+                                    {
+                                        using (Graphics g = Graphics.FromImage(bmp))
+                                        {
+                                            g.SmoothingMode = SmoothingMode.AntiAlias;
+                                            g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+                                            DrawIconWithName(pictureBox, filePath, g);
+                                        }
+                                        _pageImageCache[pageName][pictureBox] = bmp.Clone() as Image;
+                                        _pagePathCache[pageName][pictureBox] = filePath;
+                                        _pageFolderCache[pageName][pictureBox] = Directory.Exists(filePath);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"加载页面 {pageName} 失败：{ex.Message}");
+            }
+        }
+
+        private void LoadPageFromCache(string pageName)
+        {
+            if (_pageImageCache.ContainsKey(pageName))
+            {
+                foreach (var pair in _pageImageCache[pageName])
+                {
+                    pair.Key.Image = pair.Value;
+                    _savedFilePaths[pair.Key] = _pagePathCache[pageName][pair.Key];
+                    _isFolder[pair.Key] = _pageFolderCache[pageName][pair.Key];
+                }
+            }
+        }
     }
 }

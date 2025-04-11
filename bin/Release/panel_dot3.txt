@@ -1,3 +1,5 @@
+pictureBox11=D:\BaiduNetdiskDownload\Split Fiction\Split Fiction\Split\Binaries\Win64\SplitFiction.exe
+pictureBox12=C:\lightspeed\3\DS4Windows\DS4Windows.exe
 pictureBox7=C:\lightspeed\6\uu.exe - 快捷方式.lnk
 pictureBox8=C:\lightspeed\6\RetroArch.lnk
 pictureBox4=C:\lightspeed\6\Epic Games Launcher.lnk
